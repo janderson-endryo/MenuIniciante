@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>menu</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">inicio</a>
+                </li>
+                <li>
+                    <a href="#cursos">cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">login</a>
+            <a href="#regi" class="botao destaque">registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove("selected")
+            newMenu && newMenu.classList.add("selected")
+        }
+    </script>
+</body>
+
+</html>

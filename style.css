@@ -1,0 +1,108 @@
+@charset "uTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+}
+.cabecalho {
+    background-color: #333;
+    border-bottom: solid 5px #4faddb;
+    height: 80px;
+    box-sizing: content-box;
+}
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.menu-toggle {
+    float: right;
+    color: #eee;
+    background-color: #555;
+    border: solid 1px #777;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 15px;
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+.menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+}
+
+.menu a {
+    padding: 15px;
+}
+
+.autenticacao {
+    float: right;
+    height: 80px;
+    padding: 25px;
+
+}
+
+.menu a:hover {
+    background-color: #4faddb;
+}
+
+.menu a.selected {
+    background-color: #4faddb;
+    color: black;
+}
+
+.botao {
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin: 10px;
+}
+
+.destaque {
+    background-color: red;
+    color: white;
+}
+
+@media screen and (min-width: 679px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .autenticacao {
+        display: none;
+    }
+}
