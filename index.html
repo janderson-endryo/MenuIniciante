@@ -11,7 +11,78 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        .cabecalho {
+            background-color: #333;
+            border-bottom: solid 5px #4faddb;
+            height: 80px;
+            box-sizing: content-box;
+        }
+        .logo img{
+            height: 50px;
+        }
+
+        .menu ul {
+            list-style: none;
+            
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+            padding: 10px 15px;
+        }
+
+        .menu a:hover{
+            background-color: #4faddb;
+            color: #000;
+        }
+
+        .cabecalho .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin-right: 10px;
+        }
+
+        .destaque {
+            background-color: #f50a31;
+            color: #fff;
+        }
+
+        .cabecalho{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cabecalho div:nth-child(1) {
+            align-self:flex-start ;
+        }
+        .menu {
+            flex-grow: 10;
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: end;
+            
+        }
+        
+        .menu li {
+            margin: 0px 10px;
+            display: flex;
+        }
+    </style>
 
     <title>menu</title>
 </head>
@@ -24,10 +95,6 @@
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="logo">
             </a>
         </div>
-
-        <button class="menu-toggle">
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
 
         <nav class="menu">
             <ul>
@@ -52,7 +119,7 @@
     </header>
 
     <script>
-        window.onhashchange = function(e) {
+        window.onhashchange = function (e) {
             const oldURL = e.oldURL.split('#')[1]
             const newURL = e.newURL.split('#')[1]
             const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
